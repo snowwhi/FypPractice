@@ -2,6 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @plugin "tailwindcss-animate";
+@layer utilities {
+  .mask-radial {
+    mask-image: radial-gradient(
+      circle 150px at var(--mouse-x) var(--mouse-y),
+      black 20%,
+      transparent 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      circle 150px at var(--mouse-x) var(--mouse-y),
+      black 20%,
+      transparent 100%
+    );
+  }
+}
 
 /* ─── Design Tokens ─────────────────────────────────────────────────────── */
 @theme {

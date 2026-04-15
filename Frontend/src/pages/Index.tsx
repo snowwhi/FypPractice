@@ -1,16 +1,12 @@
 import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import WhyUsSection from "@/components/WhyUsSection";
+import { Outlet } from 'react-router-dom'
 import Footer from "@/components/Footer";
-
+import '../index.css'
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <WhyUsSection />
+       <Outlet/>
       <Footer />
     </div>
   );

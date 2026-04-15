@@ -7,7 +7,9 @@ import Index from "./pages/Index";
 import LoginPage from "./pages/LoginPage";
 import ChatPage from "./pages/ChatPage";
 import NotFound from "./pages/NotFound";
-
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import WhyUsSection from "@/components/WhyUsSection";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -16,12 +18,17 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/chat" element={<ChatPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+      <Routes>
+  <Route path="/" element={<Index />}>
+    <Route index element={<HeroSection />} /> 
+    <Route path="HeroSection" element={<HeroSection />} />
+    <Route path="AboutSection" element={<AboutSection />} />
+    <Route path="WhyUsSection" element={<WhyUsSection />} />
+  </Route>
+  <Route path="/login" element={<LoginPage />} />
+  <Route path="/chat" element={<ChatPage />} />
+  <Route path="*" element={<NotFound />} />
+</Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
