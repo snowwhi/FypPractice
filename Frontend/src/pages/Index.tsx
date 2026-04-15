@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import '../index.css'
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
       <Navbar />
-       <Outlet/>
+       {/* <Outlet/> */}
       <Footer />
     </div>
   );

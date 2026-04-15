@@ -21,9 +21,9 @@ const App = () => (
       <Routes>
   <Route path="/" element={<Index />}>
     <Route index element={<HeroSection />} /> 
-    <Route path="HeroSection" element={<HeroSection />} />
-    <Route path="AboutSection" element={<AboutSection />} />
-    <Route path="WhyUsSection" element={<WhyUsSection />} />
+    <Route path="home" element={<HeroSection />} />
+    <Route path="about" element={<AboutSection />} />
+    <Route path="why-us" element={<WhyUsSection />} />
   </Route>
   <Route path="/login" element={<LoginPage />} />
   <Route path="/chat" element={<ChatPage />} />
