@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import '../index.css'
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="flex flex-col h-[100dvh] overflow-hidden bg-black">
       <Navbar />
-       {/* <Outlet/> */}
+      <main className="flex-grow relative overflow-hidden">
+        <Outlet />
+      </main>
       <Footer />
-    </div>
+      </div>
   );
 };
 
