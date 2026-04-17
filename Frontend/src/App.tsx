@@ -8,11 +8,12 @@ import LoginPage from "./pages/LoginPage";
 import ChatPage from "./pages/ChatPage";
 import NotFound from "./pages/NotFound";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import WhyUsSection from "@/components/WhyUsSection";
 const queryClient = new QueryClient();
-
+import {GoogleOAuthProvider} from '@react-oauth/google'
+ const apiKey = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 const App = () => (
+  <GoogleOAuthProvider clientId={apiKey}>
+
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -22,8 +23,6 @@ const App = () => (
   <Route path="/" element={<Index />}>
     <Route index element={<HeroSection />} /> 
     <Route path="home" element={<HeroSection />} />
-    <Route path="about" element={<AboutSection />} />
-    <Route path="why-us" element={<WhyUsSection />} />
   </Route>
   <Route path="/login" element={<LoginPage />} />
   <Route path="/chat" element={<ChatPage />} />
@@ -32,6 +31,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
+  </GoogleOAuthProvider>
 );
 
 export default App;

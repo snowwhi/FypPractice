@@ -3,9 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const navLinks = [
-  { label: "Home", href: "/home" },
-  { label: "About", href: "/about" },
-  { label: "Why Us", href: "/why-us" },
 ];
 
 const Navbar = () => {
